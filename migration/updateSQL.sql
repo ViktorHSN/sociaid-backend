@@ -1,0 +1,9 @@
+ALTER TABLE users ADD facebookID VARCHAR(255), username VARCHAR(50), skills VARCHAR(255), description VARCHAR(255);
+
+ALTER TABLE users ADD isEmailVerified TINYINT DEFAULT 0;
+
+ALTER TABLE users ADD password VARCHAR(30) DEFAULT NULL;
+
+CREATE UNIQUE NONCLUSTERED INDEX username
+ON users(username)
+WHERE username IS NOT NULL;

@@ -1,0 +1,24 @@
+{
+    "dbConfig": {
+        "database": "sociaid", 
+        "username": "vhsn", 
+        "options": {
+            "host": "localhost",
+            "port": 1433,
+            "dialect": "mssql",
+            "dialectOptions": {
+               "encrypt": true
+            },
+            "driver": "tedious",
+            "native": true,
+            "logging": false
+        }  
+    },
+    "mongoConfig": {
+        "uri": "mongodb://localhost:27017/test",
+        "options" : {
+             "username": "",
+             "password": ""
+        }
+    }
+}

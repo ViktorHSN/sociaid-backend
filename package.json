@@ -1,0 +1,29 @@
+{
+  "name": "sociaid",
+  "version": "0.0.1",
+  "private": true,
+  "description": "back-end rest api of sociaid webapp.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "vhsn",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.19.0",
+    "fb": "^1.0.2",
+    "globby": "^4.0.0",
+    "hapi": "^13.0.0",
+    "hapi-auth-jwt2": "^5.4.1",
+    "jsonwebtoken": "^5.7.0",
+    "mongoose": "^4.4.19",
+    "mysql": "^2.10.2",
+    "nodemailer": "^2.4.1",
+    "randomstring": "^1.1.4",
+    "redis": "^2.4.2",
+    "require-directory": "^2.1.1",
+    "sequelize": "^3.19.2",
+    "tedious": "^1.13.2",
+     "bcrypt":"*"
+  }
+}

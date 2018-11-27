@@ -1,0 +1,18 @@
+{
+    "dbConfig": {
+        "database": "sociaid", 
+        "username": "vhsn", 
+        "options": {
+            "host": "sociaid-dev.database.windows.net",
+            "port": 1433,
+            "dialect": "mssql",
+             "encrypt": true,          
+            "driver": "tedious",
+            "native": true,
+            "logging": false
+        }  
+    },
+    "mongoConfig": {
+        
+    }
+}
