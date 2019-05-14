@@ -3,11 +3,11 @@
 const nodemailer = require('nodemailer');
 
 module.exports = {
-    sendEmail : send,
-    sendVerificationEmail : sendVerificationEmail
+    sendEmail: send,
+    sendVerificationEmail: sendVerificationEmail
 }
 
-var fromEmail = 'no-reply@sociaid.com';
+var fromEmail = 'no-eply@sociaid.com';
 
 const smtpSender = nodemailer.createTransport({
     host: 'smtp.zoho.com',
@@ -19,26 +19,25 @@ const smtpSender = nodemailer.createTransport({
     }
 });
 
-function send(recipient,subject,message){
-    
+function send(recipient, subject, message) {
+
     const mail = {
-        from : fromEmail,
-        to : recipient,
-        subject : subject,
+        from: fromEmail,
+        to: recipient,
+        subject: subject,
         html: message
     }
-    
-    
-    smtpSender.sendMail(mail,callback);
-    
-    console.log('Email sent to: '+mail.to);
+
+
+    smtpSender.sendMail(mail, callback);
+
+    console.log('Email sent to: ' + mail.to);
 }
 
-function sendVerificationEmail(host,verificationID,recipientEmail,callback){
-    
-    const htmlMessage = '<a href='+host + '/verify?verificationId=' + verificationID + '>Clique Aqui</a>';
-    
-    send(recipientEmail,'Sociaid Confirme email',htmlMessage,callback);
-       
-}
+function sendVerificationEmail(host, verificationID, recipientEmail, callback) {
 
+    const htmlMessage = '<a href=' + host + '/verify?verificationId=' + verificationID + '>Clique Aqui</a>';
+
+    send(recipientEmail, 'Sociaid Confirme email', htmlMessage, callback);
+
+}
